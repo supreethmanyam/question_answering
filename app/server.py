@@ -29,8 +29,6 @@ async def download_file(url, dest):
             with open(dest, 'wb') as f: f.write(data)
 
 async def setup_model():
-    await download_file(model_file_url, path/'models'/f'{model_file_name}.tar.gz')
-    model = hub.load(str(path/'models'/f'{model_file_name}.tar.gz'))
     model = hub.load(model_file_url)
     return model
 
@@ -45,11 +43,8 @@ async def setup_tokenizer():
     return tokenizer
 
 loop = asyncio.get_event_loop()
-tasks = [asyncio.ensure_future(setup_model()), asyncio.ensure_future(setup_tokenizer())]
-tasks = [asyncio.ensure_future(setup_tokenizer())]
-completed_tasks = loop.run_until_complete(asyncio.gather(*tasks))
-model = completed_tasks[0]
-tokenizer = completed_tasks[1]
+tokenizer = loop.run_until_complete(asyncio.ensure_future(setup_tokenizer()))
+model = loop.run_until_complete(asyncio.ensure_future(setup_model()))
 loop.close()
 
 @app.route('/')
@@ -78,7 +73,6 @@ async def analyze(request):
     short_end = tf.argmax(outputs[1][0][1:]) + 1
     answer_tokens = tokens[short_start: short_end + 1]
     answer = tokenizer.convert_tokens_to_string(answer_tokens)
-    answer = "this is the answer"
     return JSONResponse({'answer': str(answer)})
 
 if __name__ == '__main__':
