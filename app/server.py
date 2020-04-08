@@ -30,7 +30,8 @@ async def analyze(request):
     data = await request.form()
     article = data['article']
     question = data['question']
-    return JSONResponse({'result': str(question)})
+    total = f"Here is the article: {article} and here is the question: {question}"
+    return JSONResponse({'result': str(total)})
 
 if __name__ == '__main__':
     if 'serve' in sys.argv: uvicorn.run(app, host='0.0.0.0', port=8080)
