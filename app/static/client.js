@@ -12,9 +12,9 @@ function answer() {
     xhr.onload = function(e) {
         if (this.readyState === 4) {
             var response = JSON.parse(e.target.responseText);
-            el('result-label').innerHTML = `Result = ${response['result']}`;
+            el('answer-label').innerHTML = `Answer = ${response['answer']}`;
         }
-        el('analyze-button').innerHTML = 'Analyze';
+        el('answer-button').innerHTML = 'Answer';
     }
 
     var fileData = new FormData();

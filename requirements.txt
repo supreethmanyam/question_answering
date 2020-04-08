@@ -3,3 +3,6 @@ uvicorn
 python-multipart
 aiofiles
 aiohttp
+tensorflow
+tensorflow_hub
+transformers
