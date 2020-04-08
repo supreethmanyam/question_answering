@@ -1,0 +1,42 @@
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <link rel='stylesheet' href='../static/style.css'>
+        <script src='../static/client.js'></script>
+    </head>
+    <body>
+        <div>
+            <div class='center'>
+                <div class='title'>Natural Question Answering</div>
+                <div class='content'>
+                    <div class='no-display'>
+                        <input id='article-text'
+                            type='text'
+                            name='article-text'>
+                        <input id='question-text'
+                            type='text'
+                            name='question-text'>
+                    </div>
+                    <form>
+                        <textarea id="article-text" name="ArticleBox" cols="100" rows="20">
+                        Enter article here...
+                        </textarea>
+                        <br />
+                    </form>
+                    <form>
+                        <textarea id="question-text" name="QuestionBox" cols="50" rows="5">
+                        Enter question here...
+                        </textarea>
+                        <br />
+                    </form>
+                    <div class='answer'>
+                        <button id='answer-button' class='answer-button' type='button' onclick='answer()'>Answer</button>
+                    </div>
+                    <div class='result-label'>
+                        <label id='result-label'></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
