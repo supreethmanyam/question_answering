@@ -1,7 +1,14 @@
 runtime: custom
 env: flex
+threadsafe: true
+automatic_scaling:
+  cool_down_period_sec: 180
+  min_num_instances: 1
+  max_num_instances: 2
+  cpu_utilization:
+    target_utilization: 0.7
 
 resources:
-  cpu: 4
-  memory_gb: 16
-  disk_size_gb: 100
+  cpu: 2
+  memory_gb: 8
+  disk_size_gb: 50
