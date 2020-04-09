@@ -8,16 +8,21 @@
         <div>
             <div class='center'>
                 <span class="title-text">Natural Question Answering</span>
+                <span class="description-text">Question Answering systems emulate how people look for information by reading the web to return answers to common questions.
+                    <br />The QA system is built on open domain information available on the web.
+                    <br />Feel free to provide any article and pose a question.
+                </span>
+                <br />
+                <br />
+                <br />
                 <div class='content'>
                     <form>
-                        <textarea id="article-text" name="ArticleBox" cols="100" rows="20" placeholder="Enter your article"></textarea>
-                        <br />
-                        <!-- <input id="article-text" placeholder="Enter your article"> -->
-                    </form>
-                    <form>
-                        <textarea id="question-text" name="QuestionBox" cols="50" rows="10" placeholder="Enter your question"></textarea>
-                        <br />
-                        <!-- <input id="question-text" placeholder="Enter your question"> -->
+                        <label for="article">
+                          <textarea id="article-text" name="ArticleBox" cols="110" rows="25" placeholder="Enter your article"></textarea>
+                        </label>
+                        <label for="question">
+                          <textarea id="question-text" name="QuestionBox" cols="40" rows="25" placeholder="Enter your question from the article"></textarea>
+                        </label>
                     </form>
                     <div class='answer'>
                         <button id='answer-button' class='answer-button' type='button' onclick='answer()'>Answer</button>
@@ -26,6 +31,14 @@
                         <label id='answer-label'></label>
                     </div>
                 </div>
+            </div>
+            <div class='left'>
+                <h6><u>References:</u></h6>
+                <ul style="list-style-type:disc;">
+                <li style="font-size:10px";><a href="https://www.kaggle.com/c/tensorflow2-question-answering">Tensorflow 2.0 Question Answering competition on Kaggle</a></li>
+                <li style="font-size:10px";><a href="https://www.kaggle.com/seesee">seesee's</a> amazing <a href="https://www.kaggle.com/c/tensorflow2-question-answering/discussion/127333">solution</a></li>
+                <li style="font-size:10px";><a href="https://course.fast.ai/deployment_google_app_engine.html"> Fastai docs on deployment</li>
+                </ul> 
             </div>
         </div>
     </body>

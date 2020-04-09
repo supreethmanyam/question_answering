@@ -15,15 +15,15 @@ html {
 
 .title-text {
     position: absolute;
-    top: 10%; 
+    top: 8%; 
     right: 50%;
     transform: translate(50%,-50%);
     text-transform: uppercase;
     font-family: verdana;
     font-size: 2.5em;
-    font-weight: 250;
+    font-weight: 400;
     color: #f5f5f5;
-    text-shadow: 1px 1px 1px #919191,
+    /* text-shadow: 1px 1px 1px #919191,
         1px 2px 1px #919191,
         1px 3px 1px #919191,
         1px 4px 1px #919191,
@@ -36,7 +36,27 @@ html {
     1px 18px 6px rgba(16,16,16,0.4),
     1px 22px 10px rgba(16,16,16,0.2),
     1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4);
+    1px 30px 60px rgba(16,16,16,0.4); */
+}
+
+.description-text {
+    position: absolute;
+    top: 13%;
+    text-align: center;
+    margin-left: -350px;
+    line-height: 1.2;
+}
+
+.label { 
+    width: 500px; 
+    float: left; 
+    margin: 0px 20px 0 0; 
+}
+
+.textarea { 
+    width: 500px; 
+    border: 2px solid #000; 
+    padding: 5px; 
 }
 
 .center {
